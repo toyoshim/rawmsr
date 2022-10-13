@@ -40,8 +40,12 @@ fn main() {
     if vid.is_some() && pid.is_some() {
         let handle = rusb::open_device_with_vid_pid(vid.unwrap(), pid.unwrap());
         match handle {
-            None => { println!("fail") },
-            Some(_handle) => { println!("ok") },
+            None => {
+                println!("fail")
+            }
+            Some(_handle) => {
+                println!("ok")
+            }
         }
         return;
     }
